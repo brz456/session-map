@@ -1,0 +1,99 @@
+{
+  "provider": "internal-transcript-tool",
+  "speakers": [
+    { "speakerId": "S1", "displayName": "Creator" },
+    { "speakerId": "S2", "displayName": "Consultant" }
+  ],
+  "sections": [
+    {
+      "providerKey": "1",
+      "title": "Introduction and Setup",
+      "startTimeSec": 0,
+      "endTimeSec": 120,
+      "summaryBullets": [
+        "Discussed the match lineup and team composition",
+        "Identified key moments to analyze"
+      ],
+      "decisions": ["Focus on early game positioning"]
+    },
+    {
+      "providerKey": "2",
+      "title": "Early Game Analysis",
+      "startTimeSec": 120,
+      "endTimeSec": 480,
+      "summaryBullets": [
+        "Analyzed first engagement at dragon",
+        "Reviewed map awareness during laning phase"
+      ],
+      "decisions": ["Prioritize vision control near objectives"],
+      "importantFacts": ["Team was behind 2k gold at 5 minutes"]
+    },
+    {
+      "providerKey": "3",
+      "title": "Mid Game Team Fights",
+      "startTimeSec": 480,
+      "endTimeSec": 900,
+      "summaryBullets": [
+        "Reviewed the baron play",
+        "Discussed communication during team fights"
+      ],
+      "actionItems": ["Practice baron setups in scrims"]
+    }
+  ],
+  "utterances": [
+    {
+      "speakerId": "S1",
+      "startTimeSec": 5,
+      "endTimeSec": 12,
+      "text": "Okay let's start by looking at your first match from yesterday."
+    },
+    {
+      "speakerId": "S2",
+      "startTimeSec": 13,
+      "endTimeSec": 20,
+      "text": "Sure, I think the early game went pretty well but we made some mistakes around dragon."
+    },
+    {
+      "speakerId": "S1",
+      "startTimeSec": 21,
+      "endTimeSec": 28,
+      "text": "Let's skip to that moment. What time was the dragon fight?"
+    },
+    {
+      "speakerId": "S2",
+      "startTimeSec": 29,
+      "endTimeSec": 35,
+      "text": "Around 6 minutes in. I'll pause it here."
+    },
+    {
+      "speakerId": "S1",
+      "startTimeSec": 130,
+      "endTimeSec": 145,
+      "text": "So at this point, your jungler is on the opposite side of the map. Why did you engage?"
+    },
+    {
+      "speakerId": "S2",
+      "startTimeSec": 146,
+      "endTimeSec": 165,
+      "text": "I thought we could win the 4v4 because their support was low. But looking back, I didn't notice their mid had teleport up."
+    },
+    {
+      "speakerId": "S1",
+      "startTimeSec": 166,
+      "endTimeSec": 180,
+      "text": "That's a great observation. Always check summoner spells before committing to a fight."
+    },
+    {
+      "speakerId": "S2",
+      "startTimeSec": 500,
+      "endTimeSec": 520,
+      "text": "This baron play is where we threw the game. We had a 3k gold lead."
+    },
+    {
+      "speakerId": "S1",
+      "startTimeSec": 521,
+      "endTimeSec": 545,
+      "text": "Let's break it down. Notice the vision setup here. You only have one ward in the pit."
+    }
+  ]
+}

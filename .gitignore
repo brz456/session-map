@@ -1,0 +1,23 @@
+.claude/
+.local/
+agents/
+design/
+dist/
+node_modules/
+release/
+tmp*/
+vendor/
+
+# Environment / secrets
+.env
+.env.*
+
+# Build cache
+*.tsbuildinfo
+
+# Logs
+*.log
+
+# OS artifacts
+.DS_Store
+Thumbs.db

@@ -1,0 +1,87 @@
+/* src/renderer/styles/themes/synthwave.css */
+/* SessionMap - Neon Synthwave Theme */
+/* 80s retrowave meets futuristic interface */
+
+[data-theme="synthwave"] {
+  /* Core Palette - Deep purple-blacks */
+  --color-void: #0a0812;
+  --color-surface-0: #110e1a;
+  --color-surface-1: #18132b;
+  --color-surface-2: #201838;
+  --color-surface-3: #2a2048;
+  --color-border: #3d2d5c;
+  --color-border-subtle: #2a2048;
+
+  /* Text - Cool lavender whites */
+  --color-text: #f0e8ff;
+  --color-text-muted: #a090c0;
+  --color-text-dim: #6a5890;
+
+  /* Accent - Hot magenta/pink */
+  --color-accent: #ff2d92;
+  --color-accent-bright: #ff5aab;
+  --color-accent-dim: #cc1a70;
+  --color-accent-glow: rgba(255, 45, 146, 0.2);
+  --color-accent-glow-subtle: rgba(255, 45, 146, 0.05);
+  --color-accent-hover: rgba(255, 45, 146, 0.25);
+  --color-accent-muted: rgba(255, 45, 146, 0.5);
+
+  /* Live/Recording state */
+  --color-live: #ff2d55;
+  --color-live-bright: #ff5a7a;
+  --color-live-dim: #cc1a40;
+  --color-live-glow: rgba(255, 45, 85, 0.2);
+
+  /* Success state */
+  --color-success: #00ff88;
+  --color-success-bright: #00ff99;
+  --color-success-dim: #00cc6a;
+  --color-success-glow: rgba(0, 255, 136, 0.15);
+
+  /* Warning/Danger */
+  --color-warning: #ffcc00;
+  --color-danger: #ff2d55;
+
+  /* Danger backgrounds and borders */
+  --color-danger-bg-subtle: rgba(255, 45, 85, 0.1);
+  --color-danger-bg: rgba(255, 45, 85, 0.15);
+  --color-danger-border-subtle: rgba(255, 45, 85, 0.2);
+  --color-danger-border: rgba(255, 45, 85, 0.3);
+  --color-danger-border-strong: rgba(255, 45, 85, 0.4);
+
+  /* Group bar colors */
+  --color-group-bar: rgba(0, 240, 255, 0.25);
+  --color-group-bar-selected: rgba(255, 45, 146, 0.5);
+
+  /* Overlays */
+  --color-overlay: rgba(10, 8, 18, 0.85);
+  --color-overlay-heavy: rgba(10, 8, 18, 0.95);
+
+  /* UI element colors */
+  --color-button-shine: rgba(255, 255, 255, 0.06);
+  --color-marker-group-glow: rgba(0, 240, 255, 0.4);
+  --color-on-accent: #ffffff;
+  --color-on-success: #0a0812;
+  --color-on-danger: #ffffff;
+
+  /* Importance markers */
+  --color-importance-high: #ff2d55;
+  --color-importance-medium: #ffcc00;
+  --color-importance-low: #00ff88;
+
+  /* Typography */
+  --font-display: 'Outfit', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Shadows */
+  --shadow-subtle: 0 2px 4px rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 1px rgba(255, 45, 146, 0.3);
+  --shadow-deep: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 2px rgba(255, 45, 146, 0.2);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-modal: 0 8px 32px rgba(0, 0, 0, 0.7), 0 0 4px rgba(255, 45, 146, 0.3);
+
+  /* Marker shadows (for timeline markers) */
+  --shadow-marker-hover: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 4px rgba(255, 45, 146, 0.4));
+  --shadow-marker-selected: drop-shadow(0 0 6px rgba(0, 240, 255, 0.8)) drop-shadow(0 0 12px rgba(0, 240, 255, 0.4));
+  --shadow-marker-drag: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 8px rgba(255, 45, 146, 0.5));
+}

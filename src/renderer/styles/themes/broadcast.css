@@ -1,0 +1,89 @@
+/* src/renderer/styles/themes/broadcast.css */
+/* SessionMap - Broadcast Studio Theme */
+/* Professional amber/gold broadcast control room */
+/* This is the default theme - applies to :root */
+
+:root,
+[data-theme="broadcast"] {
+  /* Core Palette */
+  --color-void: #0a0a0b;
+  --color-surface-0: #101012;
+  --color-surface-1: #161618;
+  --color-surface-2: #1c1c1f;
+  --color-surface-3: #242428;
+  --color-border: #2a2a30;
+  --color-border-subtle: #1f1f24;
+
+  /* Text */
+  --color-text: #e8e8ec;
+  --color-text-muted: #7a7a86;
+  --color-text-dim: #4a4a54;
+
+  /* Accent - Warm amber/gold */
+  --color-accent: #f5a623;
+  --color-accent-bright: #ffc043;
+  --color-accent-dim: #c78418;
+  --color-accent-glow: rgba(245, 166, 35, 0.15);
+  --color-accent-glow-subtle: rgba(245, 166, 35, 0.03);
+  --color-accent-hover: rgba(245, 166, 35, 0.2);
+  --color-accent-muted: rgba(245, 166, 35, 0.6);
+
+  /* Live/Recording state */
+  --color-live: #e53935;
+  --color-live-bright: #ef5350;
+  --color-live-dim: #c72c2c;
+  --color-live-glow: rgba(229, 57, 53, 0.2);
+
+  /* Success state */
+  --color-success: #00c853;
+  --color-success-bright: #00e676;
+  --color-success-dim: #00a043;
+  --color-success-glow: rgba(0, 200, 83, 0.12);
+
+  /* Warning/Danger */
+  --color-warning: #ff9800;
+  --color-danger: #e53935;
+
+  /* Danger backgrounds and borders */
+  --color-danger-bg-subtle: rgba(229, 57, 53, 0.1);
+  --color-danger-bg: rgba(229, 57, 53, 0.15);
+  --color-danger-border-subtle: rgba(229, 57, 53, 0.2);
+  --color-danger-border: rgba(229, 57, 53, 0.3);
+  --color-danger-border-strong: rgba(229, 57, 53, 0.4);
+
+  /* Group bar colors */
+  --color-group-bar: rgba(255, 255, 255, 0.25);
+  --color-group-bar-selected: rgba(245, 166, 35, 0.5);
+
+  /* Overlays */
+  --color-overlay: rgba(0, 0, 0, 0.7);
+  --color-overlay-heavy: rgba(0, 0, 0, 0.85);
+
+  /* UI element colors */
+  --color-button-shine: rgba(255, 255, 255, 0.04);
+  --color-marker-group-glow: rgba(255, 255, 255, 0.3);
+  --color-on-accent: #0a0a0b;
+  --color-on-success: #ffffff;
+  --color-on-danger: #ffffff;
+
+  /* Importance markers */
+  --color-importance-high: #e53935;
+  --color-importance-medium: #f5a623;
+  --color-importance-low: #00c853;
+
+  /* Typography */
+  --font-display: 'Outfit', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+
+  /* Shadows */
+  --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-deep: 0 16px 64px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-modal: 0 8px 32px rgba(0, 0, 0, 0.5);
+
+  /* Marker shadows (for timeline markers) */
+  --shadow-marker-hover: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+  --shadow-marker-selected: drop-shadow(0 0 3px rgba(255, 255, 255, 0.9));
+  --shadow-marker-drag: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6));
+}

@@ -1,0 +1,88 @@
+{
+  "name": "sessionmap",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Session capture and course annotation tool for Windows",
+  "author": "Brian Zourdani",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brz456/session-map.git"
+  },
+  "homepage": "https://github.com/brz456/session-map",
+  "keywords": [
+    "electron",
+    "screen-recording",
+    "annotation",
+    "obs",
+    "course-creation",
+    "video",
+    "markers"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "concurrently -k -n renderer,electron \"npm run dev:renderer\" \"npm run dev:electron\"",
+    "dev:renderer": "vite --port 5180 --strictPort",
+    "dev:electron": "npm run build:electron && wait-on tcp:5180 && cross-env SESSIONMAP_DEV_SERVER_URL=http://localhost:5180 electron dist/main.js",
+    "build": "npm run build:renderer && npm run build:electron",
+    "build:renderer": "vite build",
+    "build:electron": "npm run build:electron:main && npm run build:electron:preload",
+    "build:electron:main": "esbuild src/main/main.ts --bundle --platform=node --format=cjs --outfile=dist/main.js --external:electron --external:obs-studio-node --external:ffmpeg-static",
+    "build:electron:preload": "esbuild src/preload/index.ts --bundle --platform=node --format=cjs --outfile=dist/preload.js --external:electron --external:obs-studio-node --external:ffmpeg-static",
+    "check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "package": "npm run build && electron-builder",
+    "parse": "ts-node --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\"}\" src/tools/transcriptPipeline.ts --mode all --config .local/input/raw/transcript-config.json",
+    "merge": "ts-node --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\"}\" src/tools/buildMergedOutput.ts --session .local/input/session.json --transcript .local/input/transcript.json --out .local/output/merged-session.json"
+  },
+  "build": {
+    "appId": "com.sessionmap.app",
+    "productName": "SessionMap",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "node_modules/**/*"
+    ],
+    "asarUnpack": [
+      "node_modules/ffmpeg-static/**/*",
+      "node_modules/obs-studio-node/**/*"
+    ],
+    "win": {
+      "icon": "src/renderer/public/favicon.ico",
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "dependencies": {
+    "ffmpeg-static": "5.2.0",
+    "obs-studio-node": "file:vendor/obs-studio-node",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.7",
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5",
+    "@vitejs/plugin-react": "4.3.4",
+    "concurrently": "9.1.2",
+    "cross-env": "7.0.3",
+    "electron": "36.8.1",
+    "electron-builder": "^26.4.0",
+    "esbuild": "0.24.2",
+    "jsdom": "27.4.0",
+    "ts-node": "10.9.2",
+    "typescript": "5.7.3",
+    "vite": "6.0.7",
+    "vitest": "^4.0.17",
+    "wait-on": "8.0.3"
+  }
+}
